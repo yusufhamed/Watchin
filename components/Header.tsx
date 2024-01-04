@@ -29,6 +29,7 @@ function Header() {
             <ThemeToggler />
           </div>
         </div>
+      </div>
 
         
     </header>
