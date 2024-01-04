@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ThemeToggler } from './ThemeToggler';
 import SearchInput from './SearchInput';
+import SigninButton from './SigninButton';
 import GenreDropdown from './GenreDropdown';
 
 function Header() {
@@ -19,12 +20,17 @@ function Header() {
         </Link>
 
         <div>
+          <div className='flex items-center space-x-2 ml-auto'>
+            {/*Genre dropdown*/}
           <div className='flex space-x-2'>
             <GenreDropdown />
             <SearchInput />
+            <SigninButton />
             <ThemeToggler />
           </div>
         </div>
+
+        
     </header>
   )
 }
