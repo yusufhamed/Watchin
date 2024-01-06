@@ -21,9 +21,10 @@ async function GenreDropdown() {
       Authorization: `Bearer ${process.env.TMDB_API_KEY}`,
     },
     next: {
-        /* Caching response for 24 hours */
-        revalidate: 60 * 60 * 24,
-    }
+      /* Caching response for 24 hours */
+      revalidate: 60 * 60 * 24,
+  }
+
 };
 
   const response = await fetch(url, options);
