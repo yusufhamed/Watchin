@@ -74,3 +74,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.movies{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  background-color: rgb(26 28 41 / var(--tw-bg-opacity)); /* Add your desired background color */
+  padding: 20px; 
+}

@@ -30,3 +30,19 @@ export type Genre = {
 export type Genres = {
     genres: Genre[];
 };
+
+export type traktvMovie ={
+  watchers: number;
+  movie: {
+    title: string;
+    year: number;
+    ids: {
+      trakt: number;
+      slug: string;
+      imdb: string;
+      tmdb: number;
+    };
+  };
+};
+
+export type traktvMovies= traktvMovie[];
