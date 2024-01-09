@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ["assets.stickpng.com"],
+        domains: ['image.tmdb.org', 'assets.stickpng.com'],
     },
 }
 
