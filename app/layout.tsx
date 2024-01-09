@@ -25,7 +25,7 @@ export default function RootLayout({
             disableTransitionOnChange
         >
           <Providers>
-            <Header />
+            <Header /> 
             {children}
           </Providers>
           
