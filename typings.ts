@@ -13,9 +13,11 @@ export type Movie = {
     video: boolean;
     vote_average: number;
     vote_count: number;
+    runtime?: number;
 };
 
 export type SearchResults = {
+    cast: any;
     page: number;
     results: Movie[];
     total_pages: number;
@@ -46,3 +48,23 @@ export type traktvMovie ={
 };
 
 export type traktvMovies= traktvMovie[];
+
+export type CastMember = {
+  adult: boolean;
+  gender: number;
+  id: number;
+  known_for_department: string;
+  name: string;
+  original_name: string;
+  popularity: number;
+  profile_path: string;
+  cast_id: number;
+  character: string;
+  credit_id: string;
+  order: number;
+};
+
+export type Credits = {
+  id: number;
+  cast: CastMember[];
+};
