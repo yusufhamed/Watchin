@@ -1,4 +1,5 @@
 import { SearchResults } from "@/typings";
+import { Movie } from "@/typings";
 
 async function fetchFromTMDB(url: URL, cacheTime?: number){
     url.searchParams.set("include_adult", "false");
@@ -60,5 +61,26 @@ export async function getSearchMovies(term: string){
     url.searchParams.set("query", term);
 
     const data = await fetchFromTMDB(url);
+    return data.results;
+}
+
+export async function getMovie(id: string): Promise<Movie> {
+    const url = new URL(`https://api.themoviedb.org/3/movie/${id}`);
+    const data = await fetchFromTMDB(url);
+
+    return data as unknown as Movie;
+}
+
+export async function getCredits(id: string){
+    const url = new URL(`https://api.themoviedb.org/3/movie/${id}/credits`);
+    const data = await fetchFromTMDB(url);
+
+    return data;
+}
+
+export async function getSimilarMovies(id: string){
+    const url = new URL(`https://api.themoviedb.org/3/movie/${id}/similar`);
+    const data = await fetchFromTMDB(url);
+
     return data.results;
 }
