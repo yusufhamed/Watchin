@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 import './MediaCard.css';
 import { Movie } from '@/typings';
 
@@ -17,13 +18,18 @@ export const MediaCard = async (props: any) => {
   const data = (await response.json()) as Movie;
   const poster = data.poster_path;
   return (
-    <div className='card'>
+    <div className='card cursor-pointer transform hover:scale-105 transition duration-200 ease-out hover:drop-shadow-lg'>
         <div className='poster'>
-            <img src={API_IMG+poster} />
+            <Image 
+            className="shadow-md shadow-gray-900 drop-shadow-xl rounded-sm"
+            src={API_IMG+poster}
+            alt={props.movie.title}
+            width={500}
+            height={1080} />
         </div>
         <div className='info'>
-            <p className='title'>{props.movie.title}</p>
-            <p className='year'>{props.movie.year}</p>
+            <p className='title font-semibold'>{props.movie.title}</p>
+            <p className='year font-semibold'>{props.movie.year}</p>
         </div>
     </div>
   );

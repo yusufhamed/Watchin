@@ -74,11 +74,26 @@
     @apply bg-background text-foreground;
   }
 }
+.container-movies{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.center{
+  display:flex;
+  flex-direction: column;
+  min-width: 70%;
+}
 
 .movies{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   gap: 1.5rem;
-  background-color: rgb(26 28 41 / var(--tw-bg-opacity)); /* Add your desired background color */
+  background-color:  rgb(20, 22, 35, var(--tw-bg-opacity)); /* Add your desired background color */
   padding: 20px; 
+  max-width: calc(var(--maxPrimaryPageWidth) - 80px - 268px);
+  justify-content: center;
+  border-radius: 20px;
 }
