@@ -24,7 +24,7 @@ export default async function Trending(props: any){
     const response = await fetch(url, options);
     const data = (await response.json()) as traktvMovies;
 
-    console.log(data);
+    
 
     return (
         <>
