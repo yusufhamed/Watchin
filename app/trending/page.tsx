@@ -11,8 +11,8 @@ import {
 
 function TrendingPage({searchParams}: {searchParams: {page: string | "undefined"}}){    
     let page: string
-    if (searchParams.page === undefined || isNaN(parseInt(searchParams.page))|| searchParams.page=='0'){
-         page = '0';
+    if (searchParams.page === undefined || isNaN(parseInt(searchParams.page))|| searchParams.page=='1'){
+         page = '1';
     }else{
          page = searchParams.page;
     }

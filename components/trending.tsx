@@ -5,7 +5,7 @@ import { traktvMovies } from "@/typings";
 export default async function Trending(props: any){
     let page: string
     if (!props.page){
-         page = '0';
+         page = '1';
     }else{
          page = props.page;
     }
