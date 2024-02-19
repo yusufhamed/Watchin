@@ -14,10 +14,10 @@ function Header() {
           {/* Logo */}
           <Link href="/" className='mr'>
             <Image
-              src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png"
+              src="https://i.imgur.com/SN1DoJE.png"
               alt="trakt logo"
-              width={70}
-              height={70}
+              width={90}
+              height={90}
               className='cursor-pointer'
             />
           </Link>
