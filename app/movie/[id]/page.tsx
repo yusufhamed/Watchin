@@ -1,7 +1,8 @@
 import { getMovie, getCredits, getSimilarMovies } from "@/lib/getMovies";
 import { Movie, CastMember } from "@/typings";
 import MoviesCarousel from "@/components/MoviesCarousel";
-import { Button } from "@/components/ui/button";
+import SubmitButton from "@/components/submitButton";
+import {useSession} from 'next-auth/react'
 
 type Props = {
   params: {
@@ -12,9 +13,17 @@ type Props = {
   };
 };
 
+
 async function MoviePage({ params: { id } }: Props) {
+
   const movie: Movie = await getMovie(id);
   const credits = await getCredits(id);
+  const movieData= {
+    ID: id,
+    User: 'admin',
+  }
+  console.log(movieData)
+
   const castMembers: CastMember[] = credits.cast.slice(0, 5);
   let similarMovies = await getSimilarMovies(id);
   if (similarMovies.length === 0) {
@@ -74,10 +83,10 @@ async function MoviePage({ params: { id } }: Props) {
 
         <div className="flex justify-center">
           <div style={{ marginLeft: "25vw" }}>
-            <Button>Add to Watch List</Button>
+            <SubmitButton movieData={movieData}/>
           </div>
         </div>
-
+        
         {similarMovies.length > 0 && (
           <MoviesCarousel movies={similarMovies} title="Recommended movies" />
         )}

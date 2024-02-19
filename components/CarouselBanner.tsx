@@ -25,6 +25,7 @@ function CarouselBanner({ movies }: { movies: Movie[] }) {
                 key={movie.id}
                 src={getImagePath(movie.backdrop_path, true)}
                 alt={movie.title}
+                layout="responsive"
                 width={1920}
                 height={1080}
             />

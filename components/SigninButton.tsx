@@ -15,6 +15,7 @@ const SigninButton = () => {
     if(session && session.data){
         const name = session.data.user.sub;
         const capitalizedUserName = name.charAt(0).toUpperCase() + name.slice(1);
+        localStorage.setItem('username', capitalizedUserName);
         return(
             <div className="flex items-center gap-4 ml-auto">
                 <p className="text-sky-600">Welcome, {capitalizedUserName}!</p>

@@ -93,7 +93,8 @@
   gap: 1.5rem;
   background-color:  rgb(20, 22, 35, var(--tw-bg-opacity)); /* Add your desired background color */
   padding: 20px; 
-  max-width: calc(var(--maxPrimaryPageWidth) - 80px - 268px);
+  /*max-width: calc(var(--maxPrimaryPageWidth) - 80px - 268px);*/
   justify-content: center;
   border-radius: 20px;
+  
 }
