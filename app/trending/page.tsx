@@ -23,8 +23,7 @@ function TrendingPage({searchParams}: {searchParams: {page: string | "undefined"
 
     return(
         <>
-            <h1  className="text-6xl font-bold px-10">Trending </h1>
-            <h2 className="text-4xl font-bold px-10 ">Movies</h2>
+            
             <Trending {...searchParams} />
             <Pagination>
                 <PaginationContent>

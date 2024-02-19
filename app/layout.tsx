@@ -1,6 +1,7 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer'; // Import the Footer component
 import { ThemeProvider } from '@/components/ThemeProvider';
 import Providers from '@/components/Providers';
 
@@ -27,11 +28,11 @@ export default function RootLayout({
           <Providers>
             <Header /> 
             {children}
+            <Footer /> {/* Include the Footer component */}
           </Providers>
-          
         </ThemeProvider>
         
-        </body>
+      </body>
     </html>
   );
 }
