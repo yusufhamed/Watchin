@@ -6,7 +6,7 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 import Providers from '@/components/Providers';
 
 export const metadata: Metadata = {
-  title: 'trakt.tv',
+  title: "Watchin'",
   description: 'Discover and share , movies, tv shows and more.',
 }
 
