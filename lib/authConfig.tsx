@@ -4,7 +4,7 @@ import TraktProvider from 'next-auth/providers/trakt';
 import GoogleProvider from "next-auth/providers/google";
 
 export const authConfig: NextAuthOptions ={
-    secret: process.env.NEXT_PUBLIC_SECRET,
+    secret: process.env.SECRET,
     providers:[
         TraktProvider({
             clientId:process.env.TRAKT_CLIENT_ID as string,
