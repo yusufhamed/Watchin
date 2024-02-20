@@ -31,9 +31,9 @@ export default async function Trending(props: any){
         <div className='container-movies'>
             <div className='center'>
                 <div className='movies'>
-                    {data.map((data: any) => (
-                        <MediaCard{...data} />
-                    ))}
+                    {data.map((movie: any, index: number) => (
+                        <MediaCard key={index} {...movie} />
+                    ))} 
                 </div>
             </div>
         </div>
