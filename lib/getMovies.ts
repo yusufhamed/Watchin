@@ -26,7 +26,9 @@ async function fetchFromTMDB(url: URL, cacheTime?: number){
 }
 
 export async function getUpcomingMovies(){
-    const url = new URL("https://api.themoviedb.org/3/discover/movie?api_key=XXXX&language=pt-BR&sort_by=popularity.desc&primary_release_date.gte=2024-01-09");
+    const currentDate = new Date();
+    const formattedDate = currentDate.toISOString().split('T')[0];
+    const url = new URL(`https://api.themoviedb.org/3/discover/movie?api_key=XXXX&language=pt-BR&sort_by=popularity.desc&primary_release_date.gte=${formattedDate}`);
     const data = await fetchFromTMDB(url);
 
     return data.results;
